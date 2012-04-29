@@ -43,7 +43,7 @@ public class FrontListActivity extends ListActivity {
 	    	}
 	    	// second is notes
 	    	else if (position == 1) {
-	    		AlertDialog ad = new AlertDialog.Builder(getApplicationContext()).create();
+	    		AlertDialog ad = new AlertDialog.Builder(view.getContext()).create();
 	    		ad.setTitle("Last statistic");
 	    		ad.setMessage("Ran 100 feet at 3 mph");
 	    		ad.show();
