@@ -45,9 +45,6 @@ public class MachineSelectAdapter extends BaseAdapter {
 		ImageView image = (ImageView) view.findViewById(R.id.machineIcon);
 		image.setImageResource(imageId);
 
-		TextView name = (TextView) view.findViewById(R.id.machineName);
-		name.setText(listLabel);
-
 		return view;
 	}
 
