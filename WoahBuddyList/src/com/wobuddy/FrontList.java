@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class FrontList extends ListActivity {
 	public final static String[] ITEMS = {
@@ -27,7 +28,7 @@ public class FrontList extends ListActivity {
 	  lv.setOnItemClickListener(new OnItemClickListener() {
 	    public void onItemClick(AdapterView<?> parent, View view,
 	        int position, long id) {
-	    	System.out.print("");
+	    	Toast.makeText(getApplicationContext(), "Hi", Toast.LENGTH_SHORT);
 	    }
 	  });
 
