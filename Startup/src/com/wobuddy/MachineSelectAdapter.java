@@ -25,7 +25,7 @@ public class MachineSelectAdapter extends BaseAdapter {
 		String listLabel = "Error: Could not load";
 		switch (position) {
 		case 0:
-			imageId = R.drawable.hipadductor;
+			imageId = R.drawable.hipadductoricon;
 			listLabel = "Hip Adductor";
 			break;
 		case 1:

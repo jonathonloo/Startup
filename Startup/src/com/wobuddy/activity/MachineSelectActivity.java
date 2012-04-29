@@ -1,6 +1,7 @@
 package com.wobuddy.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -47,11 +48,16 @@ public class MachineSelectActivity extends Activity {
 				long id) {
 			switch (position) {
 			case 0:
-				
+				Intent i = new Intent(this, FrontListActivity.class);
+				startActivity(i);
 				break;
 			case 1:
+				Intent i = new Intent(this, FrontListActivity.class);
+				startActivity(i);
 				break;
 			case 2:
+				Intent i = new Intent(this, FrontListActivity.class);
+				startActivity(i);
 				break;
 			default:
 				break;
