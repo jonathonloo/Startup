@@ -14,7 +14,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:=""
         android:orientation="vertical" >
 
         <TextView
@@ -58,7 +57,7 @@
                 android:layout_weight="1"
                 android:background="#80000000"
                 android:paddingLeft="5dip"
-                android:src="@drawable/ButtonAddicon" />
+                android:src="@drawable/buttonaddicon" />
         </LinearLayout>
     </LinearLayout>
 
