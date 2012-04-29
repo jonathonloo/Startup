@@ -22,6 +22,7 @@
         android:layout_alignWithParentIfMissing="true"
         android:layout_toRightOf="@id/machineIcon"
         android:gravity="center_vertical"
-        android:text="Title" />
+        android:text="Title"
+        android:textSize="20" />
 
 </RelativeLayout>

@@ -25,15 +25,15 @@ public class MachineSelectAdapter extends BaseAdapter {
 		String listLabel = "Error: Could not load";
 		switch (position) {
 		case 0:
-			imageId = R.drawable.hipadductoricon;
+			imageId = R.drawable.squarehipadductor;
 			listLabel = "Hip Adductor";
 			break;
 		case 1:
-			imageId = R.drawable.treadmill;
+			imageId = R.drawable.squaretreadmill;
 			listLabel = "Treadmill";
 			break;
 		case 2:
-			imageId = R.drawable.isip;
+			imageId = R.drawable.squareiso;
 			listLabel = "Iso-lateral Incline Press";
 			break;
 		default:
