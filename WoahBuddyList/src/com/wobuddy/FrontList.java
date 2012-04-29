@@ -1,12 +1,8 @@
 package com.wobuddy;
 
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -41,8 +37,17 @@ public class FrontList extends ListActivity {
 	    		showVideo();
 	    	}
 	    	// second is notes
+	    	else if (position == 1) {
+	    		AlertDialog ad = new AlertDialog.Builder(getApplicationContext()).create();
+	    		ad.setTitle("Last statistic");
+	    		ad.setMessage("Ran 100 feet at 3 mph");
+	    		ad.show();
+	    	}
 	    	// third is broadcast
-	    	Toast.makeText(getApplicationContext(), "Hi", Toast.LENGTH_SHORT);
+	    	else {
+	    		Toast.makeText(getApplicationContext(), "spammed to facebook",
+	    				Toast.LENGTH_SHORT).show();
+	    	}
 	    }
 	  });
 
