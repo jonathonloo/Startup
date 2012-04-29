@@ -16,7 +16,7 @@ public class ActionSelectActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.actionselect);
 
-		Button scanButton = (Button) findViewById(R.id.scanButton);
+		ImageButton scanButton = (ImageButton) findViewById(R.id.scanButton);
 		scanButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
