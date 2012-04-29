@@ -46,17 +46,18 @@ public class MachineSelectActivity extends Activity {
 
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
+			Intent i = null;
 			switch (position) {
 			case 0:
-				Intent i = new Intent(this, FrontListActivity.class);
+				i = new Intent(view.getContext(), Hip.class);
 				startActivity(i);
 				break;
 			case 1:
-				Intent i = new Intent(this, FrontListActivity.class);
+				i = new Intent(view.getContext(), Treadmill.class);
 				startActivity(i);
 				break;
 			case 2:
-				Intent i = new Intent(this, FrontListActivity.class);
+				i = new Intent(view.getContext(), IsoLip.class);
 				startActivity(i);
 				break;
 			default:

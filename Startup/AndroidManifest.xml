@@ -10,10 +10,24 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name=".activity.FrontListActivity"
+            android:name=".activity.Hip"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.wobuddy.activity.FRONTLIST" />
+                <action android:name="com.wobuddy.activity.HIP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.IsoLip"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.wobuddy.activity.ISOLIP" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Treadmill"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.wobuddy.activity.TREADMILL" />
             </intent-filter>
         </activity>
         <activity

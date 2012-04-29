@@ -46,18 +46,15 @@ public class ActionSelectActivity extends Activity {
 				// parse strings
 				// use correct intent/activity for each code
 				if (contents.equals("treadmill")) {
-					Intent i = new Intent(this, FrontListActivity.class);
-					i.putExtra("url", "http://google.com");
+					Intent i = new Intent(this, Treadmill.class);
 					startActivity(i);
 				}
 				else if (contents.equals("ilip")) {
-					Intent i = new Intent(this, FrontListActivity.class);
-					i.putExtra("url", "http://youtube.com");
+					Intent i = new Intent(this, IsoLip.class);
 					startActivity(i);
 				}
-				else if (contents.equals("hipabduction")) {
-					Intent i = new Intent(this, FrontListActivity.class);
-					i.putExtra("url", "http://startupweekend.org");
+				else if (contents.equals("hipadduction")) {
+					Intent i = new Intent(this, Hip.class);
 					startActivity(i);	
 				}
 				else {

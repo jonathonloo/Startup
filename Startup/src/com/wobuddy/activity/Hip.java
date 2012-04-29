@@ -15,20 +15,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class FrontListActivity extends ListActivity {
+public class Hip extends ListActivity {
 	public final static String URL = "url";
 	public final static String[] ITEMS = {
 		"Tutorial",
 		"Notes",
 		"Broadcast"
 	};
-	private String url;
+	private String url = "http://www.youtube.com/watch?v=rck_vRkMhp8";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	  super.onCreate(savedInstanceState);
 
-	  url = getIntent().getStringExtra(URL);
 	  setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, ITEMS));
 
 	  ListView lv = getListView();
@@ -43,7 +42,7 @@ public class FrontListActivity extends ListActivity {
 	    	}
 	    	// second is notes
 	    	else if (position == 1) {
-	    		AlertDialog ad = new AlertDialog.Builder(getApplicationContext()).create();
+	    		AlertDialog ad = new AlertDialog.Builder(view.getContext()).create();
 	    		ad.setTitle("Last statistic");
 	    		ad.setMessage("Ran 100 feet at 3 mph");
 	    		ad.show();
