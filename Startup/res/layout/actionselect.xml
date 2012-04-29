@@ -18,11 +18,11 @@
             android:layout_height="wrap_content"
             android:text="Scan" />
 
-        <Button
+        <ImageButton
             android:id="@+id/scanButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Scan Button" />
+            android:src="@drawable/scan"/>
     </LinearLayout>
 
     <LinearLayout

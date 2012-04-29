@@ -14,7 +14,6 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.wobuddy.activity.MAIN" />
-
             </intent-filter>
         </activity>
         <activity
@@ -29,6 +28,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -47,6 +47,13 @@
                 <action android:name="com.google.zxing.client.android.SCAN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FrontListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.wobuddy.FRONTLIST" />
             </intent-filter>
         </activity>
     </application>
