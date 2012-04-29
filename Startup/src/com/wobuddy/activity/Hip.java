@@ -72,9 +72,7 @@ public class Hip extends Activity {
 
 				Builder ad = new AlertDialog.Builder(v.getContext());
 				ad.setTitle("Machine Complete!");
-				ad.setMessage("You have lifted an average of " + weight
-						/ appContext.getHipSetNum() + " pounds " + reps
-						+ " time(s)!\n\n Your data has been saved.");
+				ad.setMessage("Your data has been saved");
 				ad.setPositiveButton("OK",
 						new DialogInterface.OnClickListener() {
 

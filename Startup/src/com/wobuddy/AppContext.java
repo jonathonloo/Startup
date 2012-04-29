@@ -52,10 +52,10 @@ public class AppContext extends Application {
 	}
 
 	public int getIslipSetNum() {
-		return islipCount-1;
+		return islipCount;
 	}
 	
 	public int getHipSetNum() {
-		return hipCount-1;
+		return hipCount;
 	}
 }
