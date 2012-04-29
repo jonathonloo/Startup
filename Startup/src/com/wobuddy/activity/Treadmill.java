@@ -19,7 +19,7 @@ public class Treadmill extends ListActivity {
 	public final static String URL = "url";
 	public final static String[] ITEMS = {
 		"Tutorial",
-		"Notes",
+		"Stats",
 		"Broadcast"
 	};
 	private final static String url = "http://www.youtube.com/watch?feature=player_detailpage&v=Z_eC4gPHPRo#t=55s";

@@ -19,7 +19,7 @@ public class Hip extends ListActivity {
 	public final static String URL = "url";
 	public final static String[] ITEMS = {
 		"Tutorial",
-		"Notes",
+		"Stats",
 		"Broadcast"
 	};
 	private String url = "http://www.youtube.com/watch?v=rck_vRkMhp8";
