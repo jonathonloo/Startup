@@ -55,7 +55,7 @@ public class ActionSelectActivity extends Activity {
 					Intent i = new Intent(this, IsoLip.class);
 					startActivity(i);
 				}
-				else if (contents.equals("hipadduction")) {
+				else if (contents.equals("hipabduction")) {
 					Intent i = new Intent(this, Hip.class);
 					startActivity(i);	
 				}
