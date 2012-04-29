@@ -10,6 +10,13 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
+            android:name=".activity.FrontListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.wobuddy.activity.FRONTLIST" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activity.WOBuddyActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -47,13 +54,6 @@
                 <action android:name="com.google.zxing.client.android.SCAN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.FrontListActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="com.wobuddy.FRONTLIST" />
             </intent-filter>
         </activity>
     </application>
