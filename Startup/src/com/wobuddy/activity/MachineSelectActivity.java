@@ -20,7 +20,7 @@ public class MachineSelectActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.machineselect);
 
-		this.list = (ListView) findViewById(R.id.machineList);
+		this.list = (ListView) findViewById(R.id.machineListView);
 		this.adapter = new MachineSelectAdapter(this);
 		this.list.setAdapter(adapter);
 
