@@ -23,6 +23,6 @@
         android:layout_toRightOf="@id/machineIcon"
         android:gravity="center_vertical"
         android:text="Title"
-        android:textSize="20" />
+        android:textSize="20dip" />
 
 </RelativeLayout>
