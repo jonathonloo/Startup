@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.wobuddy.R;
 
@@ -26,7 +27,7 @@ public class ActionSelectActivity extends Activity {
 			}
 		});
 
-		Button selectButton = (Button) findViewById(R.id.selectButton);
+		ImageButton selectButton = (ImageButton) findViewById(R.id.selectButton);
 		selectButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -41,8 +42,6 @@ public class ActionSelectActivity extends Activity {
 			if (resultCode == RESULT_OK) {
 				String contents = intent.getStringExtra("SCAN_RESULT");
 				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
-				Button button = (Button) findViewById(R.id.scanButton);
-				button.setText(contents);
 			} else if (resultCode == RESULT_CANCELED) {
 				// Handle cancel
 			}
