@@ -6,6 +6,7 @@ public class AppContext extends Application {
 
 	private String islipData = "";
 	private String hipData = "";
+	private int i = 0;
 
 	/**
 	 * @return the islipData
@@ -19,7 +20,7 @@ public class AppContext extends Application {
 	 *            the islipData to set
 	 */
 	public void appendIslipData(String islipData) {
-		islipData += '\n' + islipData;
+		this.islipData += '\n' + islipData;
 	}
 
 	/**
@@ -34,7 +35,8 @@ public class AppContext extends Application {
 	 *            the hipData to set
 	 */
 	public void appendHipData(String hipData) {
-		hipData += '\n' + hipData;
+		i++;
+		this.hipData += "\nSet " + i + ": " + hipData;
 	}
 
 }
