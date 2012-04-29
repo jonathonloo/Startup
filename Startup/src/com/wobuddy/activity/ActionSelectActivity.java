@@ -27,7 +27,7 @@ public class ActionSelectActivity extends Activity {
 			}
 		});
 
-		ImageButton selectButton = (ImageButton) findViewById(R.id.selectButton);
+		Button selectButton = (Button) findViewById(R.id.selectButton);
 		selectButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
