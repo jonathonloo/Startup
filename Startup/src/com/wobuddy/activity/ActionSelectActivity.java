@@ -42,6 +42,28 @@ public class ActionSelectActivity extends Activity {
 			if (resultCode == RESULT_OK) {
 				String contents = intent.getStringExtra("SCAN_RESULT");
 				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
+				
+				// parse strings
+				// use correct intent/activity for each code
+				if (contents.equals("treadmill")) {
+					Intent i = new Intent("com.wobuddy.FRONTLIST");
+					i.putExtra("url", "http://google.com");
+					startActivity(i);
+				}
+				else if (contents.equals("ilip")) {
+					Intent i = new Intent("com.wobuddy.FRONTLIST");
+					i.putExtra("url", "http://youtube.com");
+					startActivity(i);
+				}
+				else if (contents.equals("hipabduction")) {
+					Intent i = new Intent("com.wobuddy.FRONTLIST");
+					i.putExtra("url", "http://startupweekend.org");
+					startActivity(i);	
+				}
+				else {
+					// not sure
+				}
+				
 			} else if (resultCode == RESULT_CANCELED) {
 				// Handle cancel
 			}

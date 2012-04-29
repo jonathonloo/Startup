@@ -13,17 +13,19 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class FrontList extends ListActivity {
+	public final static String URL = "url";
 	public final static String[] ITEMS = {
 		"Tutorial",
 		"Notes",
 		"Broadcast"
 	};
+	private String url;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	  super.onCreate(savedInstanceState);
 	  
-
+	  url = getIntent().getStringExtra(URL);
 	  setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, ITEMS));
 
 	  ListView lv = getListView();
@@ -55,7 +57,7 @@ public class FrontList extends ListActivity {
 	
 	public void showVideo() {
 		Intent i = new Intent(Intent.ACTION_VIEW,
-				  Uri.parse("http://www.youtube.com/watch?v=O74gVrtcSrY"));
+				  Uri.parse(url));
 		startActivity(i);
 	}
 	
