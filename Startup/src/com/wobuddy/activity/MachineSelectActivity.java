@@ -19,6 +19,11 @@ public class MachineSelectActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.machineselect);
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
 
 		this.list = (ListView) findViewById(R.id.machineListView);
 		this.adapter = new MachineSelectAdapter(this);
@@ -26,8 +31,8 @@ public class MachineSelectActivity extends Activity {
 
 		this.list.setOnClickListener(listener);
 		activityContext = this;
-	}
 
+	}
 	@Override
 	public void onDestroy() {
 		list.setAdapter(null);

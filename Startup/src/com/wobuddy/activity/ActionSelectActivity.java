@@ -15,7 +15,7 @@ public class ActionSelectActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.actionselect);
-
+		
 		ImageButton scanButton = (ImageButton) findViewById(R.id.scanButton);
 		scanButton.setOnClickListener(new OnClickListener() {
 
@@ -31,7 +31,7 @@ public class ActionSelectActivity extends Activity {
 		selectButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				Intent intent = new Intent("com.wobuddy.activity.MACHINELIST");
+				Intent intent = new Intent(v.getContext(), MachineSelectActivity.class);
 				startActivityForResult(intent, 0);
 			}
 		});
@@ -46,17 +46,17 @@ public class ActionSelectActivity extends Activity {
 				// parse strings
 				// use correct intent/activity for each code
 				if (contents.equals("treadmill")) {
-					Intent i = new Intent("com.wobuddy.FRONTLIST");
+					Intent i = new Intent(this, FrontListActivity.class);
 					i.putExtra("url", "http://google.com");
 					startActivity(i);
 				}
 				else if (contents.equals("ilip")) {
-					Intent i = new Intent("com.wobuddy.FRONTLIST");
+					Intent i = new Intent(this, FrontListActivity.class);
 					i.putExtra("url", "http://youtube.com");
 					startActivity(i);
 				}
 				else if (contents.equals("hipabduction")) {
-					Intent i = new Intent("com.wobuddy.FRONTLIST");
+					Intent i = new Intent(this, FrontListActivity.class);
 					i.putExtra("url", "http://startupweekend.org");
 					startActivity(i);	
 				}
