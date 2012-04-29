@@ -1,10 +1,13 @@
 package com.wobuddy.activity;
 
+import java.util.Calendar;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +32,14 @@ public class Hip extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.repmachine);
+
+		TextView title = (TextView) findViewById(R.id.viewTitle);
+		Typeface titleFont = Typeface.createFromAsset(getAssets(),
+				"fonts/leaguegothic.otf");
+		Typeface bodyFont = Typeface.createFromAsset(getAssets(),
+				"fonts/gotham-book.ttf");
+		title.setText("Hip Adductor");
+		title.setTypeface(titleFont);
 
 		// Set spinners
 		weightSpinner = (Spinner) findViewById(R.id.weightSpinner);
@@ -85,9 +96,12 @@ public class Hip extends Activity {
 						});
 				ad.show();
 
+				appContext.setLastUsedHip(Calendar.getInstance().getTime());
 			}
 		});
+		dataView.setTypeface(bodyFont);
 		dataView.setText(appContext.getHipData());
+
 
 	}
 }

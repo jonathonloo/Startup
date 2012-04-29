@@ -9,8 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hip Adduction"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#B88E08" />
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,41 +28,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="#B88E08" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dip" >
 
-            <Spinner
-                android:id="@+id/weightSpinner"
+            <Button
+                android:id="@+id/startTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/weight_array" />
+                android:text="Start" />
 
-            <Spinner
-                android:id="@+id/repSpinner"
+            <Button
+                android:id="@+id/pauseTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/rep_array" />
-
-            <ImageButton
-                android:id="@+id/addRowButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:background="#80000000"
-                android:paddingLeft="5dip"
-                android:src="@drawable/buttonaddicon" />
+                android:text="Pause" />
         </LinearLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/submitButton"
+        android:id="@+id/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit" />
