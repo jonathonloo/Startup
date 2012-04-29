@@ -3,7 +3,8 @@ package com.wobuddy.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,25 +30,32 @@ public class MachineSelectActivity extends Activity {
 		this.adapter = new MachineSelectAdapter(this);
 		this.list.setAdapter(adapter);
 
-		this.list.setOnClickListener(listener);
+		this.list.setOnItemClickListener(listener);
 		activityContext = this;
 
 	}
+
 	@Override
 	public void onDestroy() {
 		list.setAdapter(null);
 		super.onDestroy();
 	}
 
-	public OnClickListener listener = new OnClickListener() {
+	public OnItemClickListener listener = new OnItemClickListener() {
 
-		public void onClick(View view) {
-			CharSequence text = "Hello toast!";
-			int duration = Toast.LENGTH_SHORT;
-
-			Toast toast = Toast.makeText(activityContext, text, duration);
-			toast.show();
-			adapter.notifyDataSetChanged();
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			switch (position) {
+			case 0:
+				
+				break;
+			case 1:
+				break;
+			case 2:
+				break;
+			default:
+				break;
+			}
 		}
 	};
 }

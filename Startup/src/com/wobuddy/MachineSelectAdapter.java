@@ -29,12 +29,12 @@ public class MachineSelectAdapter extends BaseAdapter {
 			listLabel = "Hip Adductor";
 			break;
 		case 1:
-			imageId = R.drawable.hipadductoricon;
+			imageId = R.drawable.treadmill;
 			listLabel = "Treadmill";
 			break;
 		case 2:
-			imageId = R.drawable.hipadductoricon;
-			listLabel = "";
+			imageId = R.drawable.isip;
+			listLabel = "Iso-lateral Incline Press";
 			break;
 		default:
 			break;
