@@ -1,4 +1,7 @@
-package com.wobuddy;
+package com.wobuddy.activity;
+
+import com.wobuddy.R;
+import com.wobuddy.R.layout;
 
 import android.app.Activity;
 import android.os.Bundle;
