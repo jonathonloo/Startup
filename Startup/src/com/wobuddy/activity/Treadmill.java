@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.wobuddy.AppContext;
@@ -30,7 +31,7 @@ public class Treadmill extends Activity {
 	private Date startTime = null;
 	private Date endTime = null;
 	private Button startButton;
-	private Button pauseButton;
+	private Button stopButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +42,21 @@ public class Treadmill extends Activity {
 		Typeface titleFont = Typeface.createFromAsset(getAssets(),
 				"fonts/leaguegothic.otf");
 		Typeface bodyFont = Typeface.createFromAsset(getAssets(),
-				"fonts/gotham-book.ttf");
+				"fonts/gothambook.ttf");
 		title.setText("Treadmill");
 		title.setTypeface(titleFont);
+		
+		TextView bodyTitle = (TextView) findViewById(R.id.historicalText);
+		bodyTitle.setTypeface(titleFont);
+		
+		TextView tutorialTitle = (TextView) findViewById(R.id.tutorialText);
+		tutorialTitle.setTypeface(titleFont);
 
 		dataView = (TextView) findViewById(R.id.historicalText);
 		appContext = (AppContext) getApplicationContext();
 
 		// Tutorial button
-		Button tutorial = (Button) findViewById(R.id.videoTutorial);
+		ImageButton tutorial = (ImageButton) findViewById(R.id.videoTutorial);
 
 		tutorial.setOnClickListener(new OnClickListener() {
 
@@ -59,7 +66,7 @@ public class Treadmill extends Activity {
 			}
 		});
 
-		Button submitButton = (Button) findViewById(R.id.Button);
+		ImageButton submitButton = (ImageButton) findViewById(R.id.Button);
 		submitButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -99,8 +106,8 @@ public class Treadmill extends Activity {
 			}
 		});
 
-		pauseButton = (Button) findViewById(R.id.pauseTimer);
-		pauseButton.setOnClickListener(new OnClickListener() {
+		stopButton = (Button) findViewById(R.id.pauseTimer);
+		stopButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Calendar instance = Calendar.getInstance();
