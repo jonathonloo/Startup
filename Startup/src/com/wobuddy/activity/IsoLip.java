@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +34,12 @@ public class IsoLip extends Activity {
 		setContentView(R.layout.repmachine);
 
 		TextView title = (TextView) findViewById(R.id.viewTitle);
+		Typeface titleFont = Typeface.createFromAsset(getAssets(),
+				"fonts/leaguegothic.otf");
+		Typeface bodyFont = Typeface.createFromAsset(getAssets(),
+				"fonts/gotham-book.ttf");
 		title.setText("Iso-Lateral Incline Press");
+		title.setTypeface(titleFont);
 		// Set spinners
 		weightSpinner = (Spinner) findViewById(R.id.weightSpinner);
 		repSpinner = (Spinner) findViewById(R.id.repSpinner);
@@ -41,7 +47,7 @@ public class IsoLip extends Activity {
 		appContext = (AppContext) getApplicationContext();
 
 		// Tutorial button
-		Button tutorial = (Button) findViewById(R.id.videoTutorial);
+		ImageButton tutorial = (ImageButton) findViewById(R.id.videoTutorial);
 
 		tutorial.setOnClickListener(new OnClickListener() {
 
@@ -65,7 +71,7 @@ public class IsoLip extends Activity {
 			}
 		});
 
-		Button submitButton = (Button) findViewById(R.id.submitButton);
+		ImageButton submitButton = (ImageButton) findViewById(R.id.submitButton);
 		submitButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

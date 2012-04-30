@@ -38,7 +38,7 @@ public class Hip extends Activity {
 				"fonts/leaguegothic.otf");
 		Typeface bodyFont = Typeface.createFromAsset(getAssets(),
 				"fonts/gotham-book.ttf");
-		title.setText("Hip Adductor");
+		title.setText("Hip Adduction");
 		title.setTypeface(titleFont);
 
 		// Set spinners
@@ -48,7 +48,7 @@ public class Hip extends Activity {
 		appContext = (AppContext) getApplicationContext();
 
 		// Tutorial button
-		Button tutorial = (Button) findViewById(R.id.videoTutorial);
+		ImageButton tutorial = (ImageButton) findViewById(R.id.videoTutorial);
 
 		tutorial.setOnClickListener(new OnClickListener() {
 
@@ -72,7 +72,7 @@ public class Hip extends Activity {
 			}
 		});
 
-		Button submitButton = (Button) findViewById(R.id.submitButton);
+		ImageButton submitButton = (ImageButton) findViewById(R.id.submitButton);
 		submitButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

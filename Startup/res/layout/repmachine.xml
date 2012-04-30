@@ -1,51 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/viewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hip Adduction"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#B88E08" />
-
     <LinearLayout
+        android:id="@+id/treadmillBackgroundLayoutBorder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#4A4740"
+        android:paddingBottom="2dip" >
+
+        <LinearLayout
+            android:id="@+id/titleImage"
+            android:layout_width="12dip"
+            android:layout_height="match_parent"
+            android:background="#B88E08" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/treadmillBackgroundLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E4" >
+
+            <TextView
+                android:id="@+id/viewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:text="Hip Adduction"
+                android:textColor="#B88E08"
+                android:textSize="40dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/navbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/treadmillBackgroundLayoutBorder"
         android:orientation="vertical" >
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Record"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_marginTop="14dp"
+            android:text="LOG RESULTS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#B88E08" />
 
         <TextView
             android:id="@+id/historicalText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#4A4740" />
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WEIGHT"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#9F9E98" />
 
             <Spinner
                 android:id="@+id/weightSpinner"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:entries="@array/weight_array" />
 
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPS"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#9F9E98" />
+
             <Spinner
                 android:id="@+id/repSpinner"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:entries="@array/rep_array" />
@@ -55,36 +111,54 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:background="#80000000"
+                android:background="#FFFFFF"
                 android:paddingLeft="5dip"
-                android:src="@drawable/buttonaddicon" />
+                android:src="@drawable/addrow" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logworkout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TUTORIAL"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#4A4740" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <ImageButton
+                android:id="@+id/videoTutorial"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/video" />
+
+            <ImageButton
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/description" />
+
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="10dip" >
-
-        <Button
-            android:id="@+id/videoTutorial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Video Tutorial" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
