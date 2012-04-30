@@ -21,7 +21,7 @@ import com.wobuddy.R;
 
 public class IsoLip extends Activity {
 	public final static String URL = "url";
-	private String url = "http://www.youtube.com/watch?v=ef1x9LaQU8Q";
+	private String url = "http://www.youtube.com/watch?v=al_vDXyuhak";
 	private Spinner weightSpinner;
 	private Spinner repSpinner;
 	private TextView dataView;

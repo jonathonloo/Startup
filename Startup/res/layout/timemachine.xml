@@ -2,14 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/viewTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/treadmillBackgroundLayoutBorder"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hip Adduction"
-        android:textSize="40dip" />
+        android:background="#4A4740"
+        android:paddingBottom="2dip" >
+
+        <LinearLayout
+            android:id="@+id/titleImage"
+            android:layout_width="12dip"
+            android:layout_height="match_parent"
+            android:background="#B88E08" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/treadmillBackgroundLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E4" >
+
+            <TextView
+                android:id="@+id/viewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:text="Treadmill"
+                android:textColor="#B88E08"
+                android:textSize="40dip" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,8 +45,10 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Record"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:text="Log Results"
+            android:textColor="#B88E08"
+            android:textSize="30dip" 
+            android:padding="20dip" />
 
         <TextView
             android:id="@+id/historicalText"
@@ -29,50 +56,54 @@
             android:layout_height="wrap_content"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceMedium"
-         android:textColor="#B88E08" />
+            android:textColor="#B88E08" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip" >
+            android:padding="10dip"
+            android:weightSum="1" >
 
             <Button
                 android:id="@+id/startTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.4"
                 android:text="Start" />
 
             <Button
                 android:id="@+id/pauseTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.4"
                 android:text="Pause" />
         </LinearLayout>
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit" />
-
+        android:src="@drawable/logworkout" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:padding="10dip" >
 
-        <Button
+        <ImageButton
             android:id="@+id/videoTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Video Tutorial" />
+            android:src="@drawable/video" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description" />
+            android:src="@drawable/description" />
     </LinearLayout>
 
 </LinearLayout>
