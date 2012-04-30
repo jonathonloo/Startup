@@ -37,9 +37,6 @@ public class FrontListAdapter extends BaseAdapter {
 		RelativeLayout view = (RelativeLayout) inflater.inflate(
 				R.layout.list_item, null, false);
 
-		TextView name = (TextView) view.findViewById(R.id.machineName);
-		name.setText(listLabel);
-
 		return view;
 	}
 

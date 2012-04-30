@@ -2,27 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/machineitem"
     android:layout_width="fill_parent"
-    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:padding="6dip" >
-
+
     <ImageView
         android:id="@+id/machineIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="6dip" />
-
-    <TextView
-        android:id="@+id/machineName"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_toRightOf="@id/machineIcon"
-        android:gravity="center_vertical"
-        android:text="Title"
-        android:textSize="20dip" />
+        android:layout_marginRight="6dip"
+        android:scaleType="matrix" />
 
 </RelativeLayout>

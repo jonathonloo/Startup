@@ -25,15 +25,15 @@ public class MachineSelectAdapter extends BaseAdapter {
 		String listLabel = "Error: Could not load";
 		switch (position) {
 		case 0:
-			imageId = R.drawable.squarehipadductor;
+			imageId = R.drawable.browse_hipadduction;
 			listLabel = "Hip Adductor";
 			break;
 		case 1:
-			imageId = R.drawable.squaretreadmill;
+			imageId = R.drawable.browse_treadmill;
 			listLabel = "Treadmill";
 			break;
 		case 2:
-			imageId = R.drawable.squareiso;
+			imageId = R.drawable.browse_ilip;
 			listLabel = "Iso-lateral Incline Press";
 			break;
 		default:
@@ -44,9 +44,6 @@ public class MachineSelectAdapter extends BaseAdapter {
 
 		ImageView image = (ImageView) view.findViewById(R.id.machineIcon);
 		image.setImageResource(imageId);
-
-		TextView name = (TextView) view.findViewById(R.id.machineName);
-		name.setText(listLabel);
 
 		return view;
 	}
