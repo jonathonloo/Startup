@@ -62,7 +62,7 @@ public class Treadmill extends Activity {
 			}
 		});
 
-		Button submitButton = (Button) findViewById(R.id.submitButton);
+		Button submitButton = (Button) findViewById(R.id.Button);
 		submitButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

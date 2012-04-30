@@ -9,7 +9,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <EditText android:id="@+id/distanceInput" 
-        android:hint="Distance in miles"/>
+    <EditText
+        android:id="@+id/distanceInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Distance in miles" />
 
 </LinearLayout>
