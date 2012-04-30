@@ -2,15 +2,11 @@ package com.wobuddy.activity;
 
 import java.util.Calendar;
 import java.util.Date;
-
-import com.wobuddy.AppContext;
-import com.wobuddy.R;
-import com.wobuddy.RunEndDialogClick;
+import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -19,10 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.wobuddy.AppContext;
+import com.wobuddy.R;
+import com.wobuddy.RunEndDialogClick;
 
 public class Treadmill extends Activity {
 	public final static String URL = "url";
@@ -69,7 +66,15 @@ public class Treadmill extends Activity {
 
 				Builder ad = new AlertDialog.Builder(v.getContext());
 				ad.setTitle("Run Complete!");
-				ad.setMessage("Time (Minutes): " + (endTime.getTime() - startTime.getTime())/60000
+				long millis = (endTime.getTime() - startTime.getTime());
+				String format = String.format(
+						"%d:%d (m:s)",
+						TimeUnit.MILLISECONDS.toMinutes(millis),
+						TimeUnit.MILLISECONDS.toSeconds(millis)
+								- TimeUnit.MINUTES
+										.toSeconds(TimeUnit.MILLISECONDS
+												.toMinutes(millis)));
+				ad.setMessage("Time: " + format
 						+ "\n\nHow far did you run?");
 				LayoutInflater factory = LayoutInflater.from(v.getContext());
 				final View textEntryView = factory.inflate(
