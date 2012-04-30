@@ -56,12 +56,12 @@ public class IsoLip extends Activity {
 		addButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				appContext.appendHipData(repSpinner.getSelectedItem()
+				appContext.appendIslipData(repSpinner.getSelectedItem()
 						.toString()
 						+ " reps at "
 						+ weightSpinner.getSelectedItem().toString()
 						+ " pounds");
-				dataView.setText(appContext.getHipData());
+				dataView.setText(appContext.getIslipData());
 			}
 		});
 
@@ -82,8 +82,8 @@ public class IsoLip extends Activity {
 
 							public void onClick(DialogInterface dialog,
 									int which) {
-								appContext.clearHipData();
-								dataView.setText(appContext.getHipData());
+								appContext.clearIslipData();
+								dataView.setText(appContext.getIslipData());
 								dialog.cancel();
 							}
 						});
@@ -93,7 +93,7 @@ public class IsoLip extends Activity {
 
 			}
 		});
-		dataView.setText(appContext.getHipData());
+		dataView.setText(appContext.getIslipData());
 
 	}
 }

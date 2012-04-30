@@ -1,9 +1,11 @@
 package com.wobuddy.activity;
 
 import java.util.Calendar;
+import java.util.Date;
 
 import com.wobuddy.AppContext;
 import com.wobuddy.R;
+import com.wobuddy.RunEndDialogClick;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,12 +15,14 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Treadmill extends Activity {
 	public final static String URL = "url";
@@ -26,17 +30,22 @@ public class Treadmill extends Activity {
 	private TextView dataView;
 	private AppContext appContext;
 
+	private Date startTime = null;
+	private Date endTime = null;
+	private Button startButton;
+	private Button pauseButton;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.timemachine);
-		
+
 		TextView title = (TextView) findViewById(R.id.viewTitle);
 		Typeface titleFont = Typeface.createFromAsset(getAssets(),
 				"fonts/leaguegothic.otf");
 		Typeface bodyFont = Typeface.createFromAsset(getAssets(),
 				"fonts/gotham-book.ttf");
-		title.setText("Hip Adductor");
+		title.setText("Treadmill");
 		title.setTypeface(titleFont);
 
 		dataView = (TextView) findViewById(R.id.historicalText);
@@ -59,21 +68,38 @@ public class Treadmill extends Activity {
 			public void onClick(View v) {
 
 				Builder ad = new AlertDialog.Builder(v.getContext());
-				ad.setTitle("Machine Complete!");
-				ad.setMessage("Your data has been saved");
+				ad.setTitle("Run Complete!");
+				ad.setMessage("Time (Minutes): " + (endTime.getTime() - startTime.getTime())/60000
+						+ "\n\nHow far did you run?");
+				LayoutInflater factory = LayoutInflater.from(v.getContext());
+				final View textEntryView = factory.inflate(
+						R.layout.distancelayout, null);
+				ad.setView(textEntryView);
 				ad.setPositiveButton("OK",
-						new DialogInterface.OnClickListener() {
-
-							public void onClick(DialogInterface dialog,
-									int which) {
-								appContext.clearHipData();
-								dataView.setText(appContext.getHipData());
-								dialog.cancel();
-							}
-						});
+						new RunEndDialogClick(v.getContext()));
 				ad.show();
 
-				appContext.setLastUsedHip(Calendar.getInstance().getTime());
+				appContext.setLastUsedTreadmill(Calendar.getInstance()
+						.getTime());
+			}
+		});
+
+		// Start button
+		startButton = (Button) findViewById(R.id.startTimer);
+		startButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Calendar instance = Calendar.getInstance();
+				startTime = instance.getTime();
+			}
+		});
+
+		pauseButton = (Button) findViewById(R.id.pauseTimer);
+		pauseButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Calendar instance = Calendar.getInstance();
+				endTime = instance.getTime();
 			}
 		});
 
