@@ -45,10 +45,10 @@ public class Treadmill extends Activity {
 				"fonts/gothambook.ttf");
 		title.setText("Treadmill");
 		title.setTypeface(titleFont);
-		
+
 		TextView bodyTitle = (TextView) findViewById(R.id.historicalText);
 		bodyTitle.setTypeface(titleFont);
-		
+
 		TextView tutorialTitle = (TextView) findViewById(R.id.tutorialText);
 		tutorialTitle.setTypeface(titleFont);
 
@@ -70,29 +70,30 @@ public class Treadmill extends Activity {
 		submitButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
+				if ((endTime != null) && (startTime != null)) {
+					Builder ad = new AlertDialog.Builder(v.getContext());
+					ad.setTitle("Run Complete!");
+					long millis = (endTime.getTime() - startTime.getTime());
+					String format = String.format(
+							"%d:%d (m:s)",
+							TimeUnit.MILLISECONDS.toMinutes(millis),
+							TimeUnit.MILLISECONDS.toSeconds(millis)
+									- TimeUnit.MINUTES
+											.toSeconds(TimeUnit.MILLISECONDS
+													.toMinutes(millis)));
+					ad.setMessage("Time: " + format
+							+ "\n\nHow far did you run?");
+					LayoutInflater factory = LayoutInflater.from(v.getContext());
+					final View textEntryView = factory.inflate(
+							R.layout.distancelayout, null);
+					ad.setView(textEntryView);
+					ad.setPositiveButton("OK",
+							new RunEndDialogClick(v.getContext()));
+					ad.show();
 
-				Builder ad = new AlertDialog.Builder(v.getContext());
-				ad.setTitle("Run Complete!");
-				long millis = (endTime.getTime() - startTime.getTime());
-				String format = String.format(
-						"%d:%d (m:s)",
-						TimeUnit.MILLISECONDS.toMinutes(millis),
-						TimeUnit.MILLISECONDS.toSeconds(millis)
-								- TimeUnit.MINUTES
-										.toSeconds(TimeUnit.MILLISECONDS
-												.toMinutes(millis)));
-				ad.setMessage("Time: " + format
-						+ "\n\nHow far did you run?");
-				LayoutInflater factory = LayoutInflater.from(v.getContext());
-				final View textEntryView = factory.inflate(
-						R.layout.distancelayout, null);
-				ad.setView(textEntryView);
-				ad.setPositiveButton("OK",
-						new RunEndDialogClick(v.getContext()));
-				ad.show();
-
-				appContext.setLastUsedTreadmill(Calendar.getInstance()
-						.getTime());
+					appContext.setLastUsedTreadmill(Calendar.getInstance()
+							.getTime());
+				}
 			}
 		});
 

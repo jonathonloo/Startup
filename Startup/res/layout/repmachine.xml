@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -36,129 +36,160 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/navbar" />
-
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/treadmillBackgroundLayoutBorder"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:text="LOG RESULTS"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#B88E08" />
-
-        <TextView
-            android:id="@+id/historicalText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#4A4740" />
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
 
         <LinearLayout
-            android:id="@+id/linearLayout3"
+            android:id="@+id/actionBorder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:padding="10dip" >
+            android:background="#4A4740"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip" >
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/actionBackground"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="WEIGHT"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#9F9E98" />
+                android:background="#E1E1E4" >
 
-            <Spinner
-                android:id="@+id/weightSpinner"
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/weight_array" />
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/treadmillBackgroundLayoutBorder"
+                    android:orientation="vertical"
+                    android:padding="10dip" >
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="REPS"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#9F9E98" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOG RESULTS"
+                        android:textColor="#B88E08"
+                        android:textSize="30dip" />
 
-            <Spinner
-                android:id="@+id/repSpinner"
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/rep_array" />
+                    <TextView
+                        android:id="@+id/historicalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium Text"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#4A4740" />
 
-            <ImageButton
-                android:id="@+id/addRowButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="#FFFFFF"
-                android:paddingLeft="5dip"
-                android:src="@drawable/addrow" />
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:padding="10dip" >
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WEIGHT"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#9F9E98" />
+
+                        <Spinner
+                            android:id="@+id/weightSpinner"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/weight_array" />
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="REPS"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#9F9E98" />
+
+                        <Spinner
+                            android:id="@+id/repSpinner"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/rep_array" />
+
+                        <ImageButton
+                            android:id="@+id/addRowButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="#80E1E1E4"
+                            android:paddingLeft="5dip"
+                            android:src="@drawable/addrow" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/submitButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/logworkout" />
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logworkout" />
     </LinearLayout>
-
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/actionBorder"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/linearLayout2"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TUTORIAL"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#4A4740" />
+        android:background="#4A4740"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
 
         <LinearLayout
-            android:id="@+id/linearLayout1"
+            android:id="@+id/actionBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip" >
-
-            <ImageButton
-                android:id="@+id/videoTutorial"
-                android:layout_width="143dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/video" />
+            android:background="#E1E1E4" >
 
-            <ImageButton
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/description" />
+                android:orientation="vertical"
+                android:padding="10dip" >
 
+                <TextView
+                    android:id="@+id/tutorialText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:text="TUTORIAL: "
+                    android:textColor="#4A4740"
+                    android:textSize="40dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/videoTutorial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/video" />
+
+                    <ImageButton
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/description" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

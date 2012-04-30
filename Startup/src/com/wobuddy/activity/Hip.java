@@ -37,9 +37,15 @@ public class Hip extends Activity {
 		Typeface titleFont = Typeface.createFromAsset(getAssets(),
 				"fonts/leaguegothic.otf");
 		Typeface bodyFont = Typeface.createFromAsset(getAssets(),
-				"fonts/gotham-book.ttf");
+				"fonts/gothambook.ttf");
 		title.setText("Hip Adduction");
 		title.setTypeface(titleFont);
+		
+		TextView bodyTitle = (TextView) findViewById(R.id.textView2);
+		bodyTitle.setTypeface(titleFont);
+		
+		TextView tutorialTitle = (TextView) findViewById(R.id.tutorialText);
+		tutorialTitle.setTypeface(titleFont);
 
 		// Set spinners
 		weightSpinner = (Spinner) findViewById(R.id.weightSpinner);
